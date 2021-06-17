@@ -38,6 +38,8 @@
             android:layout_height="30dp"/>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/cardSocial"
+        android:transitionName="cardSocial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/bluetecsec"

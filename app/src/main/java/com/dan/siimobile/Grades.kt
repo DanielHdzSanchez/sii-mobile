@@ -4,9 +4,12 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
+import androidx.core.app.ActivityOptionsCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
 
 class Grades : AppCompatActivity() {
@@ -14,10 +17,12 @@ class Grades : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grades)
         val back = findViewById<ImageView>(R.id.btnBackGH)
+        val grades = findViewById<LinearLayout>(R.id.cardGrades)
         back.setOnClickListener {
-            startActivity(Intent(this, Profile::class.java))
-            finish()
-            Animatoo.animateSlideRight(this)
+            val intent = Intent(this, Profile::class.java)
+            val options = ActivityOptionsCompat
+                    .makeSceneTransitionAnimation(this, grades as View, "cardGrades")
+            startActivity(intent, options.toBundle())
         }
 
         val grade1 = findViewById<CardView>(R.id.grade1)

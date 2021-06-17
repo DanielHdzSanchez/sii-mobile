@@ -13,18 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/studentPhoto"
+            android:transitionName="studentPhoto"
             android:layout_weight="1"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
             android:layout_gravity="center"
-            android:id="@+id/btnAccount"
-            android:src="@drawable/ic_account"
-            app:tint="@color/bluetec" />
+            android:layout_margin="10dp"
+            app:civ_border_color="@color/bluetec"
+            android:src="@drawable/student"/>
         <ImageView
             android:layout_width="50dp"
             android:layout_weight="5"
             android:layout_height="50dp"
+            android:id="@+id/logoitpn"
+            android:transitionName="itpn"
             android:layout_gravity="center"
             android:src="@drawable/itpn"/>
         <ImageView
@@ -53,7 +57,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -63,7 +67,6 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            app:civ_border_width="2dp"
                             app:civ_border_color="#FF000000"
                             android:src="@drawable/woman"/>
                         <TextView
@@ -96,7 +99,7 @@ Interesados enviar su CV a residencia@piedrasnegras.tecnm.mx"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -106,7 +109,6 @@ Interesados enviar su CV a residencia@piedrasnegras.tecnm.mx"/>
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            app:civ_border_width="2dp"
                             app:civ_border_color="#FF000000"
                             android:src="@drawable/woman2"/>
                         <TextView
@@ -140,7 +142,7 @@ es necesario que completes los pasos para tu registro. Ingresa a http://www.pied
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -150,7 +152,6 @@ es necesario que completes los pasos para tu registro. Ingresa a http://www.pied
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            app:civ_border_width="2dp"
                             app:civ_border_color="#FF000000"
                             android:src="@drawable/man"/>
                         <TextView
