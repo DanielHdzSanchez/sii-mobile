@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bluetec">#1B396A</color>
+    <color name="bluetecsec">#2A64B7</color>
+    <color name="yellowtec">#FBF700</color>
+    <!--grades-->
+    <color name="approved">#52b788</color>
+    <color name="current">#7400b8</color>
+    <color name="pending">#ffd166</color>
+    <color name="special">#f77f00</color>
+    <color name="special_failed">#e31918</color>
+    <color name="possible">#2A64B7</color>
+    <color name="not_allowed">#95999c</color>
+</resources>
