@@ -36,5 +36,11 @@ class Profile : AppCompatActivity() {
             startActivity(Intent(this, Schedule::class.java))
             finish()
         }
+
+        val social = findViewById<CardView>(R.id.cardSocial)
+        social.setOnClickListener {
+            startActivity(Intent(this, ServicioSocial::class.java))
+            finish()
+        }
     }
 }
