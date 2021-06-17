@@ -6,6 +6,7 @@
     <color name="bluetecsec">#2A64B7</color>
     <color name="yellowtec">#FBF700</color>
     <color name="lightblue">#F1F9FF</color>
+    <color name="disabled_blue">#BCE0FD</color>
     <!--grades-->
     <color name="approved">#52b788</color>
     <color name="current">#7400b8</color>
