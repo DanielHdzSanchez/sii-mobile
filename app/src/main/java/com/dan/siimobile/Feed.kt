@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityOptionsCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
 
@@ -28,5 +29,12 @@ class Feed : AppCompatActivity() {
             })
             finish()
         }
+    }
+    override fun onBackPressed() {
+        val itpn = findViewById<ImageView>(R.id.logoitpn)
+        val intent = Intent(this, MainActivity::class.java)
+        val options = ActivityOptionsCompat
+                .makeSceneTransitionAnimation(this, itpn as View, "itpn")
+        startActivity(intent, options.toBundle())
     }
 }

@@ -23,4 +23,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent, options.toBundle())
         }
     }
+
+    override fun onBackPressed() {
+        finishAffinity()
+    }
 }
