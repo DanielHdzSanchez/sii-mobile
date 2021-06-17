@@ -70,4 +70,12 @@ class Profile : AppCompatActivity() {
             startActivity(intent, options.toBundle())
         }
     }
+
+    override fun onBackPressed() {
+        val student = findViewById<CardView>(R.id.studentPhoto)
+        val intent = Intent(this, Feed::class.java)
+        val options = ActivityOptionsCompat
+                .makeSceneTransitionAnimation(this, student as View, "studentPhoto")
+        startActivity(intent, options.toBundle())
+    }
 }

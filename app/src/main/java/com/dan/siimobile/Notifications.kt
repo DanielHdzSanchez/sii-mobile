@@ -24,4 +24,17 @@ class Notifications : AppCompatActivity() {
             }
         }
     }
+
+    override fun onBackPressed() {
+        if (intent.getStringExtra("source") == "feed") {
+            startActivity(Intent(this, Feed::class.java))
+            finish()
+            Animatoo.animateSlideRight(this)
+        }
+        else {
+            startActivity(Intent(this, Profile::class.java))
+            finish()
+            Animatoo.animateSlideRight(this)
+        }
+    }
 }
