@@ -30,5 +30,11 @@ class Profile : AppCompatActivity() {
             startActivity(Intent(this, Grades::class.java))
             finish()
         }
+
+        val schedule = findViewById<CardView>(R.id.cardSchedule)
+        schedule.setOnClickListener {
+            startActivity(Intent(this, Schedule::class.java))
+            finish()
+        }
     }
 }
