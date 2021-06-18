@@ -35,11 +35,14 @@
         android:layout_margin="30dp"
         android:orientation="vertical">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nroControl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="17430048"
+            android:inputType="number"
             android:hint="Número de control"/>
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"

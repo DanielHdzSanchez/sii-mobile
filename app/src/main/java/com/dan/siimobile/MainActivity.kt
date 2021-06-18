@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
+import com.google.android.material.textfield.TextInputEditText
+import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,10 +19,24 @@ class MainActivity : AppCompatActivity() {
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
-            val intent = Intent(this, Feed::class.java)
-            val options = ActivityOptionsCompat
-                    .makeSceneTransitionAnimation(this, itpn as View, "itpn")
-            startActivity(intent, options.toBundle())
+            val nroControl = findViewById<TextInputEditText>(R.id.nroControl)
+            val password = findViewById<TextInputEditText>(R.id.password)
+            if (Pattern.matches("[0-9]{8}", nroControl.text.toString()))
+            {
+                if (password.text.toString() != "" && Pattern.matches(".{8,}", password.text.toString()))
+                {
+                    nroControl.error = null
+                    val intent = Intent(this, Feed::class.java)
+                    val options = ActivityOptionsCompat
+                            .makeSceneTransitionAnimation(this, itpn as View, "itpn")
+                    startActivity(intent, options.toBundle())
+                }
+                else
+                    password.error = "Ingresa una contraseña válida"
+            }
+            else {
+                nroControl.error = "Ingresa un número de control válido"
+            }
         }
     }
 

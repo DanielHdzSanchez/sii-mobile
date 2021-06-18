@@ -11,6 +11,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityOptionsCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 
 class Grades : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +34,12 @@ class Grades : AppCompatActivity() {
         val grade5 = findViewById<CardView>(R.id.grade5)
         val grade6 = findViewById<CardView>(R.id.grade6)
         val grade7 = findViewById<CardView>(R.id.grade7)
+
+        val semester = findViewById<Chip>(R.id.semester7)
+        val group = findViewById<ChipGroup>(R.id.chips)
+        group.setOnCheckedChangeListener { _, checkedId ->
+            grade3.visibility = if (checkedId == semester.id) View.GONE else View.VISIBLE
+        }
 
 
         grade1.setOnClickListener {

@@ -8,6 +8,7 @@ import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityOptionsCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
+import com.google.android.material.chip.Chip
 
 class Feed : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

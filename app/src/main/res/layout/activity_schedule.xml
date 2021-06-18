@@ -43,6 +43,7 @@
         android:layout_margin="15dp"
         android:orientation="horizontal">
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/days"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:chipSpacingHorizontal="15dp"
@@ -73,6 +74,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:text="JUE"/>
             <com.google.android.material.chip.Chip
+                android:id="@+id/friday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -132,6 +134,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/taller"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/grades_color_code"
@@ -279,6 +282,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/programacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/grades_color_code"
